@@ -1,0 +1,14 @@
+<ion-content>
+  <ion-grid fixed="true">
+    <ion-row>
+      <ion-col class="cursor-pointer" size="4" *ngFor="let photo of photos$ | async" (click)="addToFavorites(photo)">
+        <div style="background-color: #222222; display: flex; align-items: center; height: 100%">
+          <img [src]="photo.download_url">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-infinite-scroll (ionInfinite)="loadMorePhotos($event)">
+    <ion-infinite-scroll-content [textContent]="'Please wait. Loading'" loading-spinner="dots"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
