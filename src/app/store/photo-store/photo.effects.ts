@@ -7,7 +7,6 @@ import { PhotoService } from '../../services/photo/photo.service';
 import { of } from 'rxjs';
 import { getFavorites, getPage } from './photo.selectors';
 import { PhotoModel } from '../../models/photo.model';
-import { ToastController } from '@ionic/angular';
 import { ToastService } from '../../services/toast/toast.service';
 
 @Injectable()
